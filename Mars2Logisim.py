@@ -101,6 +101,8 @@ def run():
             rom = rom[0]
             contents = rom.text.split('\n')
             contents[1] = ' '.join(ROMs_contents[i])
+            contents[2] = ''
+            del contents[3:]
             rom.text = '\n'.join(contents)
 
         DOMTree.write(logisim_xml)
